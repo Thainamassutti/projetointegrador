@@ -3,6 +3,7 @@ package com.projetointegrador.projetofinal.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projetointegrador.projetofinal.entities.pk.ItemPedidoPK;
 
 import jakarta.persistence.EmbeddedId;
@@ -15,10 +16,11 @@ public class ItemPedido implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId
-	private ItemPedidoPK id;
+	private ItemPedidoPK id = new ItemPedidoPK();
 	
 	private Integer quantidade;
 	private Double price;
+	
 	
 	public ItemPedido() {
 		
@@ -32,6 +34,7 @@ public class ItemPedido implements Serializable{
 		this.price = price;
 	}
 	
+	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido();
 	}
