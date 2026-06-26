@@ -28,6 +28,7 @@ public class User implements Serializable{
 	private String email;
 	private String telefone;
 	private String senha;
+	private String endereco;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "cliente")
@@ -38,13 +39,14 @@ public class User implements Serializable{
 		
 	}
 
-	public User(Long id, String nome, String email, String telefone, String senha) {
+	public User(Long id, String nome, String email, String telefone, String senha, String endereco) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.telefone = telefone;
 		this.senha = senha;
+		this.endereco = endereco;
 	}
 
 	public Long getId() {
@@ -87,6 +89,16 @@ public class User implements Serializable{
 		this.senha = senha;
 	}
 	
+	
+	
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
 	public List<Pedido> getPedidos() {
 		return pedidos;
 	}
