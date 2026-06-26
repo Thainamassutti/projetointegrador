@@ -45,15 +45,19 @@ public class TestConfig implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		
-		Categoria cat1 = new Categoria(null, "Electronicos");
+		Categoria cat1 = new Categoria(null, "Eletronicos");
 		Categoria cat2 = new Categoria(null, "Livros");
 		Categoria cat3 = new Categoria(null, "Computador"); 
 		
-		Produto p1 = new Produto(null, "The Lord of the Rings", "Lorem ipsum dolor sit amet, consectetur.", 90.5, "");
-		Produto p2 = new Produto(null, "Smart TV", "Nulla eu imperdiet purus. Maecenas ante.", 2190.0, "");
-		Produto p3 = new Produto(null, "Macbook Pro", "Nam eleifend maximus tortor, at mollis.", 1250.0, "");
-		Produto p4 = new Produto(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, "");
-		Produto p5 = new Produto(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, ""); 
+		Produto p1 = new Produto(null, "Senhor dos anéis", "Uma obra-prima da literatura de fantasia escrita por J.R.R. Tolkien, que narra a épica jornada de hobbits, humanos, elfos e anões para destruir um anel maligno e salvar a Terra Média.", 90.5, "https://images.unsplash.com/photo-1767219077120-1aa6d2398717?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+		Produto p2 = new Produto(null, "Smart TV", "Smart TV 4K com Wi-Fi e Bluetooth integrados. Acede facilmente a apps de streaming como Netflix e YouTube através do sistema operativo inteligente. Permite espelhamento de ecrã do telemóvel e comando por voz com assistentes virtuais.", 2190.0, "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+		Produto p3 = new Produto(null, "Macbook Pro", "Notebook Apple MacBook Pro (de 13 polegadas, Processador M1 da Apple com CPU 8‑core e GPU 8‑core, 8 GB RAM, 256 GB) - Cinzento sideral (Recondicionado)", 1250.0, "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+		Produto p4 = new Produto(null, "PC Gamer", "PC Gamer de alta performance com processador de última geração e placa de vídeo dedicada. Equipado com memória RAM veloz, armazenamento SSD para carregamento instantâneo e gabinete com iluminação RGB. Ideal para rodar os jogos mais pesados.", 1200.0, "https://images.unsplash.com/photo-1626218174358-7769486c4b79?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+		Produto p5 = new Produto(null, "Use a cabeça JAVA", "Aprenda a diferença entre uma classe e um objeto.\r\n"
+				+ "\r\n"
+				+ "Use suas habilidades em Java para criar um jogo no estilo Batalha Naval. Entre em contato com seu objeto interior.\r\n"
+				+ "\r\n"
+				+ "Descubra por que usar referências polimórficas do tipo Objects tem um preço…", 109.99, "https://m.media-amazon.com/images/I/610D1O8WWOL._SL1426_.jpg"); 
 
 		
 		categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3));
